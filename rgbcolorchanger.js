@@ -6,7 +6,7 @@ function startColorChanger(){
   changeBackground(hours,minutes,seconds);
   minutes = checkTime(minutes);
   seconds = checkTime(seconds);
-  seTimeout(function() {startColorChanger()}, 500);
+  setTimeout(function() {startColorChanger()}, 500);
 
 }
 function changeBackground(hours, minutes,seconds){
