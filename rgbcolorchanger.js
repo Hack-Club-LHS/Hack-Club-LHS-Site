@@ -16,3 +16,9 @@ function changeBackground(hours, minutes,seconds){
   var light = seconds + 15;
 
 }
+function checkTime(i){
+  if(i < 10){
+    i = "0" + i ;
+    return i;
+  }
+}
