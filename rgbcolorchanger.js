@@ -1,4 +1,4 @@
-function startColorChanger(){
+function colorChanger(){
   var day = new Date();
   var hours = day.getHours();
   var minutes = day.getMinutes();
@@ -6,7 +6,8 @@ function startColorChanger(){
   changeBackground(hours,minutes,seconds);
   minutes = checkTime(minutes);
   seconds = checkTime(seconds);
-  setTimeout(function() {startColorChanger()}, 500);
+  document.getElementById('body')
+  setTimeout(function() {startTime()}, 500);
 
 }
 function changeBackground(hours, minutes,seconds){
@@ -21,4 +22,8 @@ function checkTime(i){
     i = "0" + i ;
     return i;
   }
+}
+function startTime(){
+  var minutes = checkTime(minutes);
+  var seconds = checkTime(minutes);
 }
