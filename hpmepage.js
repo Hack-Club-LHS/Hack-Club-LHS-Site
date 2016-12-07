@@ -1,4 +1,4 @@
-document.getElementByID("welcomToSlack")= function redirect(){
-  var local.href = "https://slack.hackclub.com/";
-  
+document.getElementByID("welcomToSlack").onclick= function redirect(){
+   location.href = "https://slack.hackclub.com/";
+
 };
