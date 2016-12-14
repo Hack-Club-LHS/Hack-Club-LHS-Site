@@ -2,14 +2,22 @@ var element = document.getElementById('welcomToSlack');
 element.onclick = function redirect(){
   window.top,location.href = "https://slack.hackclub.com/";
 };
-$('body').eq(0).css('backgroundColor','hsl(208,44%,38%)');
+var canvasWidth = window.innerWidth;
+var canvasHeight = window.innerHeight;
+var yPosition = 0;
 
-var d = 1000;
-for(var i=50; i<=50; i=i+0.1){ //i represents the lightness
-    d  += 10;
-    (function(index, duration){
-        setInterval(function(){
-            $('body').eq(0).css('backgroundColor','hsl(51,100%,'+index'%)');
-        }, duration);
-    }),(i,d);
+function setup(){
+  var canvas = createCanvas(canvasWidth,canvasHeight);
+  canvas.parent("headers");
+  frameRate(60);
+}
+function draw(){
+  colorMode(HSB);
+  background(51,100,100);
+  yPosition= yPosition - 1  ;
+  if(yPosition < 0){
+  yPosition =canvasHeight;
+}
+line(0,yPosition,canvasWidth,yPosition);
+
 }
